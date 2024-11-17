@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>Тест</title>
+</head>
+<h1>Тест по русскому языку</h1>
+<body>
+<form>
+<p>Как правильно пишется слово самокле..щиеся?</p> 
+<label>
+<input type="radio" name="mem" value="1">
+"Через я"
+</label>
+<br>
+<label>
+<input type="radio" name="mem" value="0">
+"Через ю"
+</label>
+<br>
+<label>
+<input type="radio" name="mem" value="0">
+"Через е"
+</label>
+<br>
+<p>Пставь ударение в слове "жалюзи"</p>
+<label>
+<input type="radio" name="mem1" value="0">
+"жАлюзи"
+</label>
+<br>
+<label>
+<input type="radio" name="mem1" value="1">
+"жалюзИ"
+</label>
+<br>
+<p>Поставь ударение в слове нефтепровод</p>
+<label>
+<input type="radio" name="mem2" value="1">
+"нефтепровОд"
+</label>
+<br>
+<label>
+<input type="radio" name="mem2" value="0">
+"нефтепрОвод"
+</label>
+<br>
+<label>
+<input type="radio" name="mem2" value="0">
+"нефтЕпровод"
+</label>
+<p>
+<input type="button" id="calc" value="Подсчитать результаты"> 
+<input type="reset" value="Сброс">
+</p>
+Итого верных ответов:<input type="text" name="result" readonly>
+</body>
+<script>
+calc.onclick=
+function(){
+var myform=this.form;
+var sum=0;
+if(myform.mem.value == '1') sum++;
+if(myform.mem1.value == '1') sum++;
+if(myform.mem2.value == '1') sum++;
+myform.result.value=sum;
+}
+</script>
+</form>
+</html>
